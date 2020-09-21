@@ -1,86 +1,93 @@
-import React, { useState } from "react";
-
+import React from "react";
+import "./weather.css";
 
 
 export default function Weather() {
-  let [entry, setEntry] = useState("");
-  let [bubble, setBubble] = useState("");
-  function handleSubmit(event) {
-    event.preventDefault();
-    setBubble(`it is 19°C in ${entry}`);
-  }
-  function updateInput(event) {
-    setEntry(event.target.value);
-  }
-  return (
-    <div className="cards">
-    <div className="container">
-      <div className="card whole">
-        <div className="card-body">
-          <div className="row">
-          <form onSubmit={handleSubmit}>
-        <input type="search" onChange={updateInput} />
-        <input type="submit" value="search" />
 
-            </form>
-           
-            <br />
-            <form id="place">
-              <div className="col-12">
-                <input
-                  type="button"
-                  value="Current "
-                  className="form-control"
-                  id="current-form"
-                />
-              </div>
-            </form>
-            <hr />
-            <h1 className="city">
-              <span id="place-city"></span>
-            </h1>
-            <h2 className="current">
-              <small>Last Updated:</small>
-              <small id="today-date"> June 27, 10:42pm</small>
-              <div className="clearfix weather-temp">
-                <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  alt=""
-                  id="icon"
-                  className="float-left"
-                />
-                <div className="float-left">
-                  <span className="degree">
-                    <strong id="grade">25</strong>
-                    <span className="symbols">
-                      <a href="<" id="celsius-temp" className="active">
-                        °C
-                      </a>
-                      |{" "}
-                      <a href="<" id="fahrenheit-temp">
-                        °F
-                      </a>
-                    </span>
-                  </span>
-                </div>
-              </div>
-              <br />
-              <span className="feels"> Feels like </span>
-              <span id="feel-like"> 17°c</span>
-            </h2>
-            <br />
-            <h3>{bubble}</h3>
-              <div className="details">
-              <p>
-                <span id="weather">Humidity :</span>
-                <br />
-                <span id="weather-wind">Wind :</span>
-                </p>
-              </div>
+  return (
+      <div>
+    <div class="container">
+    <div class="card whole">
+      <div class="card-body">
+        <div class="row">
+        <form id="search-form">
+          <div class="col-10">
+          <input 
+          type="search"
+          placeholder="search city 🔍"
+          class="form-control"
+          id="search-input"
+        />
+        </div>
+        </form>
+        <div class="col-0.5">
+          <span class = "button">
+          <button type="submit" id="press" class="btn btn-info">search</button>
+        </span>
+        </div>
+      </div>
+        <br/>
+        <form id="current-place">
+          <div class="col-6">
+          <input 
+            type="button"
+            value="Current "
+            class="form-control"
+            id="current-form"
+          />
           </div>
+        </form>
+        
+        <hr />
+        <h1 class="city">
+          <span id="place-city"> </span> 
+        </h1>
+        <h2 class="current">
+          <small>Last Updated:</small><small id= "today-date" > June 27, 10:42pm </small>
+          <div class="clearfix weather-temp">
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" id="icon"
+          class ="float-left"/>
+          <div class="float-left">
+            <span class="degree">
+              <strong id="grade"></strong>20<span class="symbols">
+                <a href="/" id="celsius-temp"class="active">°C</a>
+                 | <a href="/" id="fahrenheit-temp">°F</a></span>
+             </span>
+        </div>
+        </div>
+          <br />
+          <span class="feels"> Feels like </span>
+          <span id= "feel-like"> 17°c</span>
+        </h2>
+        <br />
+        <p>
+        <div class="details">
+          <span id = "weather"> 
+            Humidity :   
+          </span>
+            <br/>
+          <span id = "weather-wind">
+            Wind :
+          </span>
+        </div>
+      </p>
+        <p class="day">
+          <span id= "today">
+          sunday
+        </span>
+        <br/> 
+          <span id="description"> Light rain </span>
+        </p>
+        <hr />
+        <div class="row weather-forecast" id="forecast">
         </div>
       </div>
     </div>
+  </div>
+  <div class="source">
+    <a href="https://github.com/doctordamie4/weather-shecodes-git"  target="_blank" rel ="noopener noreferrer" >open source code : coded by Nimah Oyeniran</a>
+  </div>
+  <script src="src/index.js"></script>
   </div>
 );
 }
