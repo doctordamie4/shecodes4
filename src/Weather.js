@@ -125,7 +125,7 @@ export default function Weather() {
     </div>
   </div>
   <div class="source">
-    <a href="https://github.com/doctordamie4/weather-shecodes-git"  target="_blank" rel ="noopener noreferrer" >open source code : coded by Nimah Oyeniran</a>
+    <a href="https://github.com/doctordamie4/shecodes4"  target="_blank" rel ="noopener noreferrer" >open source code : coded by Nimah Oyeniran</a>
   </div>
   <script src="src/index.js"></script>
 </div>
