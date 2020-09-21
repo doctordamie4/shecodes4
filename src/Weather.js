@@ -43,7 +43,7 @@ export default function Weather() {
           <span id="place-city"> </span> 
         </h1>
         <h2 class="current">
-          <small>Last Updated:</small><small id= "today-date" > June 27, 10:42pm </small>
+          Last Updated:<span id= "today-date" > June 27, 10:42pm </span>
           <div class="clearfix weather-temp">
           <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" id="icon"
           class ="float-left"/>
@@ -81,6 +81,46 @@ export default function Weather() {
         <hr />
         <div class="row weather-forecast" id="forecast">
         </div>
+        <div class="row">
+    
+
+  <div class="clearfix weather-temp" >
+          mon
+      <span class="col-6">
+          <img src="http://openweathermap.org/img/wn/03d@2x.png" alt="" id="icon"
+          class ="float-left"/>
+          </span>
+          </div>
+          <div class="clearfix weather-temp" >
+          tues
+          <span class="col-6">
+          <img src="http://openweathermap.org/img/wn/11d@2x.png" alt="" id="icon"
+          class ="float-left"/>
+          </span>
+          </div>
+          <div class="clearfix weather-temp" >
+              wed
+          <span class="col-3">
+          <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" id="icon"
+          class ="float-left"/>
+          </span>
+          </div>
+          <div class="clearfix weather-temp">
+          thur
+          <span class="col-4">
+          <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="" id="icon"
+          class ="float-left"/>
+          </span>
+          </div>
+          <div class="clearfix weather-temp">
+          <small>fri</small>
+          <span class="col-3">
+          <img src="http://openweathermap.org/img/wn/10n@2x.png" alt="" id="icon"
+          class ="float-left"/>
+          </span>
+          </div>
+        
+          </div>
       </div>
     </div>
   </div>
@@ -88,6 +128,6 @@ export default function Weather() {
     <a href="https://github.com/doctordamie4/weather-shecodes-git"  target="_blank" rel ="noopener noreferrer" >open source code : coded by Nimah Oyeniran</a>
   </div>
   <script src="src/index.js"></script>
-  </div>
+</div>
 );
 }
